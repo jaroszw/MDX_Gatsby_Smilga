@@ -1,0 +1,75 @@
+---
+title: Gatsby Tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2021-05-27
+author: John Smith
+category: gatsby
+readTime: 34
+---
+
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../../components/Complete'
+
+## My first POst
+
+**I'm baby ugh tofu truffaut ethical schlitz austin cred street art kinfolk wayfarers.** Keytar enamel pin poutine tousled, meh pug crucifix roof party try-hard whatever. Kale chips listicle lomo jianbing. Normcore tacos raw denim flexitarian vice artisan plaid. Skateboard artisan vice yr cornhole asymmetrical flexitarian vaporware. Unicorn yr tofu hot chicken lumbersexual, post-ironic pug snackwave next level cornhole church-key 90's fashion axe af squid. _Vice bushwick fanny pack bitters live-edge kickstarter roof party gochujang venmo pinterest XOXO._
+
+<div className="code">
+
+```js
+const firstName = 'john'
+const lastName = 'smith'
+```
+
+</div>
+
+<div className="nice-text">
+  <h3>nice text</h3>
+  <FiInfo className="nice-text-icon"></FiInfo>
+
+    Selfies mixtape biodiesel, hot chicken viral helvetica poutine succulents.
+    Chambray vinyl meggings hoodie YOLO pork belly. Austin schlitz 8-bit
+    neutra shoreditch farm-to-table you probably haven't heard of them cray
+    tofu man bun hammock pinterest salvia green juice. Copper mug heirloom
+    YOLO sustainable 3 wolf moon 8-bit four loko quinoa. Crucifix master
+    cleanse freegan, williamsburg activated charcoal hoodie cray messenger bag
+    poutine truffaut pickled paleo seitan deep v. Brunch celiac actually
+    prism, portland occupy hella vice affogato plaid live-edge chambray
+    sriracha.
+
+</div>
+
+<h2>React Components</h2>
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+<Link to="/posts" className="btn center-btn">
+  All posts
+</Link>
