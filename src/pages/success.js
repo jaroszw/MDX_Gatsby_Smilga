@@ -3,7 +3,14 @@ import Layout from '../components/Layout'
 import { Link } from 'gatsby'
 const Success = () => {
   return (
-    <h4>success page</h4>
+    <Layout>
+      <section className="success-page">
+        <h2>Your submissino was received</h2>
+        <Link to="/" className="btn">
+          Back Home
+        </Link>
+      </section>
+    </Layout>
   )
 }
 
