@@ -3,6 +3,7 @@ import Post from './Post'
 import Banner from '../Banner'
 
 const Posts = ({ posts, title }) => {
+  console.log(title)
   return (
     <section className="posts">
       <h3 className="posts-title">{title}</h3>
